@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\dell\\Desktop\\C#Project\\CSharp-Tasks\\CSharp-Tasks.csproj",
+      "projectUniqueName": "C:\\Users\\dell\\Desktop\\CSharp Tasks\\C-Sharp-Tasks\\20 Nov\\CSharp-Tasks.csproj",
       "projectName": "CSharp-Tasks",
-      "projectPath": "C:\\Users\\dell\\Desktop\\C#Project\\CSharp-Tasks\\CSharp-Tasks.csproj",
+      "projectPath": "C:\\Users\\dell\\Desktop\\CSharp Tasks\\C-Sharp-Tasks\\20 Nov\\CSharp-Tasks.csproj",
       "packagesPath": "C:\\Users\\dell\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\dell\\Desktop\\C#Project\\CSharp-Tasks\\obj\\",
+      "outputPath": "C:\\Users\\dell\\Desktop\\CSharp Tasks\\C-Sharp-Tasks\\20 Nov\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
