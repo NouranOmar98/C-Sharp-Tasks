@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,17 +15,20 @@ namespace ConsoleApp1
             //Task1
 
             Console.WriteLine("Task1:");
-            int m = Convert.ToInt32(Console.ReadLine()); ;
+            Console.WriteLine("Enter Number to compare:");
+            int m = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter another number to compare:");
             int q = Convert.ToInt32(Console.ReadLine());
             int result = (m < q) ? m : q;
-            Console.WriteLine("The Smallest Number Is:" + result);
+            Console.WriteLine("The Smallest Number Is:" + result );
 
             //Task2
 
             Console.WriteLine("Task2:");
+            Console.WriteLine("Enter Positive or Negeative number:");
             int n = Convert.ToInt32(Console.ReadLine()); ;
-            char result2 = (n > 0) ? '+' : '-';
-            Console.WriteLine(result2);
+            string result2 = (n > 0) ? "Positive" : "Negative";
+            Console.WriteLine("The Number Sign:"+result2);
 
             //Task3
 
@@ -90,6 +94,7 @@ namespace ConsoleApp1
             Console.Write("Enter speed in km/h: ");
             int km = Convert.ToInt32(Console.ReadLine());
             double mile = km / 1.6;
+            Console.Write("Speed In mph:");
             Console.WriteLine($"{mile} mph");
 
             //Task6
@@ -106,10 +111,11 @@ namespace ConsoleApp1
             Console.WriteLine("Task7:");
             Console.Write("Enter minutes:  ");
             int minute = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Number of Total Minutes");
             Console.WriteLine(minute / 60 + " " + "Hours" + " " + minute % 60 + " " + "minutes");
 
             //Task8
-
+           
             Console.WriteLine("Task8:");
             string[] Array = { "Nouran", "Omar", "Tharwat", "Ghadeer", "Mohammed" };
 
