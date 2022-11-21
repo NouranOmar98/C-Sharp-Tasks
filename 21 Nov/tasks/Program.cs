@@ -84,46 +84,40 @@ namespace ConsoleApp1
             {
                 Console.WriteLine(arr[4]);
             }
-                //Task5
+            //Task5
 
-                Console.WriteLine("Task5:");
-                Console.Write("Enter speed in km/h: ");
-                int km = Convert.ToInt32(Console.ReadLine());
-                double mile = km / 1.6;
-                Console.WriteLine($"{mile} mph");
+            Console.WriteLine("Task5:");
+            Console.Write("Enter speed in km/h: ");
+            int km = Convert.ToInt32(Console.ReadLine());
+            double mile = km / 1.6;
+            Console.WriteLine($"{mile} mph");
 
-                //Task6
+            //Task6
 
-                Console.WriteLine("Task6:");
-                Console.Write("Enter hours:  ");
-                int hours = Convert.ToInt32(Console.ReadLine());
-                Console.Write("Enter minutes:  ");
-                int minutes = Convert.ToInt32(Console.ReadLine());
-                Console.WriteLine(hours * 60 + minutes);
+            Console.WriteLine("Task6:");
+            Console.Write("Enter hours:  ");
+            int hours = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Enter minutes:  ");
+            int minutes = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine(hours * 60 + minutes);
 
-                //Task7
+            //Task7
 
-                Console.WriteLine("Task7:");
-                Console.Write("Enter minutes:  ");
-                int minute = Convert.ToInt32(Console.ReadLine());
-                Console.WriteLine(minute / 60 + " " + "Hours" + " " + minute % 60 + " " + "minutes");
+            Console.WriteLine("Task7:");
+            Console.Write("Enter minutes:  ");
+            int minute = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine(minute / 60 + " " + "Hours" + " " + minute % 60 + " " + "minutes");
 
-                //Task8
+            //Task8
 
-                Console.WriteLine("Task8:");
-                string[] Array = { "Nouran", "Omar", "Tharwat", "Ghadeer", "Mohammed" };
+            Console.WriteLine("Task8:");
+            string[] Array = { "Nouran", "Omar", "Tharwat", "Ghadeer", "Mohammed" };
 
-                Console.WriteLine(Array[0].Substring(0, 4));
-                Console.WriteLine(Array[1].Substring(0, 4));
-                Console.WriteLine(Array[2].Substring(0, 4));
-                Console.WriteLine(Array[3].Substring(0, 4));
-                Console.WriteLine(Array[4].Substring(0, 4));
-
-
-
-
-
-
+             Console.WriteLine(Array[0].Substring(0, 4));
+             Console.WriteLine(Array[1].Substring(0, 4));
+             Console.WriteLine(Array[2].Substring(0, 4));
+             Console.WriteLine(Array[3].Substring(0, 4));
+             Console.WriteLine(Array[4].Substring(0, 4));
             }
         }
     }
