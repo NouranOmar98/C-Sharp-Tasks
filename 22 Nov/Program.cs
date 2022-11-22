@@ -67,6 +67,35 @@ namespace _22_Nov
             Console.WriteLine("Task4");
             Console.WriteLine();
 
+            Console.WriteLine("Enter numbers between (,) ");
+
+            string nums = Console.ReadLine();
+
+            string[] ns = nums.Split(',');
+
+            int sum = 0;
+
+            foreach (string d in ns) {
+                sum += Convert.ToInt32(d); 
+            }
+
+            Console.WriteLine("sum : " + sum);
+            Console.WriteLine("...........................................................................................");
+
+            //Task5
+
+            Console.WriteLine("Task5");
+            Console.WriteLine();
+
+            int oddnumber = 0;
+            for (int x = 1; x <= 100; x++)
+            {
+                if (x % 2 == 1)
+                {
+                    oddnumber = oddnumber+ x;
+                }
+            }
+            Console.WriteLine("Sum Of Oddnimber:"+oddnumber);
             Console.WriteLine("...........................................................................................");
             //Task6
 
@@ -97,18 +126,6 @@ namespace _22_Nov
                 }
                 Console.WriteLine();
             }
-
-
-
-
-
-
-
-
-
-
-
-
         }
     }
 }
