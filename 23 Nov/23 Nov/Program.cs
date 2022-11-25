@@ -22,12 +22,13 @@ namespace Practice
             Console.WriteLine("........................................................................................................................");
 
             //Task3 call
-            Console.WriteLine();
+            Years();
+            Console.WriteLine("........................................................................................................................");
 
             //Task4 call
-            Console.WriteLine( "Your Age in Days is: " + Days());
+            Console.WriteLine("Your Age in Days is: " + Days());
             Console.WriteLine("........................................................................................................................");
-            
+
             //Task5 call
             Console.WriteLine("Numbers Of Lags is: " + Legs());
             Console.WriteLine("........................................................................................................................");
@@ -55,6 +56,21 @@ namespace Practice
             return result;
         }
 
+        //Task3 code
+
+        static void Years()
+        {
+
+            Console.WriteLine("Task1");
+            Console.WriteLine();
+            int [] years = { 1763, 1972, 1925, 1916, 1984, 1124, 1950, 2020 };
+            foreach (int year in years)
+            {
+                if (year > 1950) 
+                Console.WriteLine( year + " is greater than 1950");
+            }
+        }
+    
         //Task4 code 
 
         static int Days()
