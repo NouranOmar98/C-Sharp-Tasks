@@ -27,7 +27,10 @@ namespace Practice
             //Task4 call
             Console.WriteLine( "Your Age in Days is: " + Days());
             Console.WriteLine("........................................................................................................................");
-
+            
+            //Task5 call
+            Console.WriteLine("Your Age in Days is: " + Legs());
+            Console.WriteLine("........................................................................................................................");
 
 
         }
@@ -59,6 +62,23 @@ namespace Practice
             int age = Convert.ToInt32(Console.ReadLine());
             int ageindays = age * 365;
             return ageindays;
+
+        }
+
+        //Task5
+
+        static int Legs()
+        {
+            Console.WriteLine("Task5");
+            Console.WriteLine();
+            Console.Write("Enter Numbers of Chicken: ");
+            int Chicken = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Enter Numbers of Cow: ");
+            int Cow = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Enter Numbers of Pigs: ");
+            int Pigs = Convert.ToInt32(Console.ReadLine());
+            int Legs = (Chicken * 2) + (Pigs * 4) + (Cow * 4);
+            return Legs;
 
         }
 
