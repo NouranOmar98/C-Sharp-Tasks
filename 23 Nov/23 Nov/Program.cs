@@ -29,7 +29,11 @@ namespace Practice
             Console.WriteLine("........................................................................................................................");
             
             //Task5 call
-            Console.WriteLine("Your Age in Days is: " + Legs());
+            Console.WriteLine("Numbers Of Lags is: " + Legs());
+            Console.WriteLine("........................................................................................................................");
+
+            //Task7 call
+            Console.WriteLine("The Power Of Number is : " + Power());
             Console.WriteLine("........................................................................................................................");
 
 
@@ -62,7 +66,6 @@ namespace Practice
             int age = Convert.ToInt32(Console.ReadLine());
             int ageindays = age * 365;
             return ageindays;
-
         }
 
         //Task5
@@ -79,7 +82,18 @@ namespace Practice
             int Pigs = Convert.ToInt32(Console.ReadLine());
             int Legs = (Chicken * 2) + (Pigs * 4) + (Cow * 4);
             return Legs;
+        }
 
+        //Task7 code
+
+        static int Power()
+        {
+            Console.WriteLine("Task7");
+            Console.WriteLine();
+            Console.Write("Enter Number to Calc Power: ");
+            int number1 = Convert.ToInt32(Console.ReadLine());
+            int result1 = number1 * number1;
+            return result1;
         }
 
 
