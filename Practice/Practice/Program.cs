@@ -12,8 +12,8 @@ namespace Practice
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("The Cube Of Number is : " + Cube());
-            Console.WriteLine("........................................................................................................................");
+        Console.WriteLine("The Cube Of Number is : " + Cube());
+        Console.WriteLine(".........................................................................................................................");
         }
 
         static int Cube()
@@ -24,6 +24,6 @@ namespace Practice
             int number = Convert.ToInt32(Console.ReadLine());
             int result = number * number * number;
             return result;
-        }
+        } 
     }
 }
