@@ -12,15 +12,29 @@ namespace Practice
     {
         static void Main(string[] args)
         {
-            //Task1 call
+
+
+            //Task1 Call
+
+
+            //Task2 call
             Console.WriteLine("The Cube Of Number is : " + Cube());
             Console.WriteLine("........................................................................................................................");
 
-            //Task2 call
+            //Task3 call
             Console.WriteLine();
+
+            //Task4 call
+            Console.WriteLine(Days());
+
+
         }
 
-        //Task1 code
+        //Task1 code 
+
+
+
+        //Task2 code
 
         static int Cube()
         {
@@ -32,7 +46,20 @@ namespace Practice
             return result;
         }
 
-        //Task2 code 
+        //Task4 code 
+
+        static int Days()
+        {
+
+            Console.WriteLine("Task4");
+            Console.WriteLine();
+            Console.Write("Enter Your Age in Years: ");
+            int age = Convert.ToInt32(Console.ReadLine());
+            int ageindays = age * 365;
+            return ageindays;
+
+        }
+
 
     }
 }
