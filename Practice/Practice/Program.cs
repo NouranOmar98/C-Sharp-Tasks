@@ -14,7 +14,9 @@ namespace Practice
         {
         Console.WriteLine("The Cube Of Number is : " + Cube());
         Console.WriteLine("........................................................................................................................");
+        Console.WriteLine(Getmax(2,5));
         }
+        
 
         static int Cube()
         {
@@ -24,6 +26,27 @@ namespace Practice
             int number = Convert.ToInt32(Console.ReadLine());
             int result = number * number * number;
             return result;
-        } 
+        }
+
+        static int Getmax(int num1, int num2)
+        {
+            //Console.Write("Enter num1: ");
+            //int num1=Convert.ToInt32 (Console.ReadLine());
+            //Console.Write("Enter num2: ");
+            //int num2 = Convert.ToInt32(Console.ReadLine());
+            if (num1 > num2)
+            {
+                return num1;
+
+            }
+            else
+            {
+                return num2;
+            }
+         
+
+
+
+        }
     }
 }

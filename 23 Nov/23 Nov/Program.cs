@@ -37,6 +37,10 @@ namespace Practice
             Console.WriteLine("The Power Of Number is : " + Power());
             Console.WriteLine("........................................................................................................................");
 
+            //Task8 call
+           Leapyear();
+            Console.WriteLine("........................................................................................................................");
+
 
         }
 
@@ -60,8 +64,7 @@ namespace Practice
 
         static void Years()
         {
-
-            Console.WriteLine("Task1");
+            Console.WriteLine("Task3");
             Console.WriteLine();
             int [] years = { 1763, 1972, 1925, 1916, 1984, 1124, 1950, 2020 };
             foreach (int year in years)
@@ -84,7 +87,7 @@ namespace Practice
             return ageindays;
         }
 
-        //Task5
+        //Task5 code
 
         static int Legs()
         {
@@ -111,6 +114,22 @@ namespace Practice
             int result1 = number1 * number1;
             return result1;
         }
+
+        //Task8 code
+
+        static void Leapyear()
+        {
+            Console.WriteLine("Task8");
+            Console.WriteLine();
+            Console.Write("Enter year between 1900-2024 ");
+            int year = Convert.ToInt32(Console.ReadLine());
+            if (((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0))
+                Console.WriteLine( year + " is a Leap Year ");
+            else
+                Console.WriteLine( year + " isn't a Leap Year ");
+        }
+
+
 
 
     }
