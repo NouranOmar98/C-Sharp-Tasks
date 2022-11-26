@@ -16,6 +16,8 @@ namespace Practice
 
             //Task1 Call
 
+            calculationSumAndAVG();
+            Console.WriteLine("........................................................................................................................");
 
             //Task2 call
             Console.WriteLine("The Cube Of Number is : " + Cube());
@@ -30,7 +32,11 @@ namespace Practice
             Console.WriteLine("........................................................................................................................");
 
             //Task5 call
-            Console.WriteLine("Numbers Of Lags is: " + Legs());
+            Console.WriteLine("Numbers Of Animals Legs is: " + Legs());
+            Console.WriteLine("........................................................................................................................");
+
+            //Task6 call
+            Console.WriteLine(login());
             Console.WriteLine("........................................................................................................................");
 
             //Task7 call
@@ -38,14 +44,41 @@ namespace Practice
             Console.WriteLine("........................................................................................................................");
 
             //Task8 call
-           Leapyear();
+            Leapyear();
             Console.WriteLine("........................................................................................................................");
 
+            //Task9 call
+            Prime();
+            Console.WriteLine("........................................................................................................................");
 
+           //Task10 call
+            Sentence();
+            Console.WriteLine("........................................................................................................................");
         }
 
         //Task1 code 
 
+        static public void calculationSumAndAVG()
+        {
+            Console.WriteLine("Task 1");
+            Console.WriteLine();
+            Console.WriteLine("Enter 10 Numbers to find SUM and AVG Please :))");
+            Console.WriteLine();
+            int[] numbers = new int[10];
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                Console.WriteLine("Enter Number: ");
+                numbers[i] = Convert.ToInt32(Console.ReadLine());
+            }
+            int sum = 0;
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                sum += numbers[i];
+
+            }
+            Console.WriteLine("the sumation of numbers is : " + sum);
+            Console.WriteLine("the AVG of numbers is : " + sum / numbers.Length);
+        }
 
 
         //Task2 code
@@ -103,6 +136,30 @@ namespace Practice
             return Legs;
         }
 
+        //Task6 code
+
+        static public string login()
+        {
+            Console.WriteLine( "Task 6");
+            Console.WriteLine();
+            Console.WriteLine("Enter your email please: ");
+            string email = Console.ReadLine();
+            Console.WriteLine("Enter your pasword please: ");
+            string password = Console.ReadLine();
+
+            string[] emails = { "nsreen@gmail.com", "nouran@gmail.com", "rogina@gmail.com", "razan@gmail.com", "lubna@gmail.com" };
+            string[] passwords = { "1234", "123", "12345", "1111" , "2525"};
+            for (int i = 0; i < emails.Length; i++)
+            {
+                if (email == emails[i] && password == passwords[i])
+                {
+                    return "pass";
+                }
+            }
+
+            return "fail";
+        }
+
         //Task7 code
 
         static int Power()
@@ -121,7 +178,7 @@ namespace Practice
         {
             Console.WriteLine("Task8");
             Console.WriteLine();
-            Console.Write("Enter year between 1900-2024 ");
+            Console.Write("Enter year between 1900-2024: ");
             int year = Convert.ToInt32(Console.ReadLine());
             if (((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0))
                 Console.WriteLine( year + " is a Leap Year ");
@@ -129,8 +186,37 @@ namespace Practice
                 Console.WriteLine( year + " isn't a Leap Year ");
         }
 
+        //Task 9 code 
+        static public void Prime()
+        {
 
+            Console.WriteLine("Task 9");
+            Console.WriteLine();
+            Console.WriteLine("Enter a number : ");
+            int number = Convert.ToInt32(Console.ReadLine());
 
+            for (int i = 2; i < number; i++)
+            {
+                if (number % i == 0)
+                {
+                    Console.WriteLine(number + " is not prime number");
+                    return;
+                }
+            }
+            Console.WriteLine(number + " is a prime number");
+        }
 
-    }
+        //Task 10
+        static public void Sentence()
+
+        {
+            Console.WriteLine("Task 10");
+            Console.WriteLine();
+            Console.WriteLine("Write a sentence here to return the number of words: ");
+            string sentence= Console.ReadLine();
+            string[] s = sentence.Split(new char[] { });
+            Console.WriteLine(s.Length);
+
+        }
+        }
 }
