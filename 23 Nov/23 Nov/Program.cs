@@ -218,5 +218,5 @@ namespace Practice
             Console.WriteLine(s.Length);
 
         }
-        }
+    }
 }
