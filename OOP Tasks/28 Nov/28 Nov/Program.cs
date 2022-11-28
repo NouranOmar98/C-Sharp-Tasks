@@ -14,6 +14,8 @@ namespace _28_Nov
             //string country, string year, string type, double price, string model, string palletno, string color
             Car c = new Car("Jordan", "2015", "Hybrid", 1000, "Audi", "1222", "Red") ;
 
+            Console.WriteLine("Task 1");
+            Console.WriteLine();
             Console.WriteLine(c.Country);
             Console.WriteLine(c.Year);
             Console.WriteLine(c.Type );
@@ -37,6 +39,16 @@ namespace _28_Nov
             Console.WriteLine(c.Color);
 
             c.start();
+
+            Console.WriteLine();
+
+            Console.WriteLine("Task 2");
+            Console.WriteLine();
+            Console.Write("Inter Num Of Letters: ");
+            int l = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Results= ");
+            a.distance( l);
+
         }
 
     }

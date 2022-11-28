@@ -49,5 +49,11 @@ namespace _28_Nov
         public child(string country, string year, string type, double price, string model, string palletno, string color):base(country,  year,  type,  price,  model,  palletno,  color)
         {
         }
+        public void distance( int L)
+        {
+            int dis = L * 20;
+            Console.WriteLine(dis);
+
+        }
     }
 }
