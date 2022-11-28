@@ -32,7 +32,6 @@ namespace _27_Nov
             this.email = email;
             this.id = id;
 
-            this.phonenumber = phonenumber;
 
             if (phonenumber.Substring(0, 3) == "077" || phonenumber.Substring(0, 3) == "078" || phonenumber.Substring(0, 3) == "079")
             {
@@ -42,11 +41,12 @@ namespace _27_Nov
             else
             {
                 Console.WriteLine("Please Enter right number");
+                
             }
         }
         static void Main(string[] args)
         {
-            PersonInformation Nouran = new PersonInformation(24, "Femail", "Nouran", "nouranomar@gmail.com", 998200260, "0777077777");
+            PersonInformation Nouran = new PersonInformation(24, "Femail", "Nouran", "nouranomar@gmail.com", 998200260, "7077941");
 
             Console.WriteLine(" Hello Guys! My Name is " + Nouran.name);
             Console.WriteLine(" I am " + Nouran.age + " Years Old " + Nouran.ginder);
