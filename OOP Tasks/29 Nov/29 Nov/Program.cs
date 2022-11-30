@@ -32,7 +32,7 @@ namespace nov_29
             }
             public virtual void greet(int id)
             {
-                Console.WriteLine("Hello emplyee number" + " " + id);
+                //Console.WriteLine("your id" + " " + id);
             }
         }
 
@@ -49,7 +49,6 @@ namespace nov_29
         }
         static void Main(string[] args)
         {
-
             Console.WriteLine();
             Console.WriteLine("Task 1");
             Console.WriteLine();
