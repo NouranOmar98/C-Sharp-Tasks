@@ -1,79 +1,55 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
-using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
-namespace nov29
+namespace _29_11
 {
     class Employee
     {
+        public string name { get; set; }
+        public int id { get; set; }
+        public DateTime dateofbirth { get; set; }
 
-        public string employee_name { get; set; }
-        public int employee_id { get; set; }
-        public int birth_date { get; set; }
-
-        public Employee()
+        public Employee(string name, int id, int day, int month, int year)
         {
-        }
-
-        //constructor Employee
-        public Employee(string name, int id, int BDate)
-        {
-            employee_name = name;
-            employee_id = id;
-            birth_date = BDate;
-
-        }
-        //age method
-        public void print(int age)
-        {
-            birth_date = 2022 - age;
-            Console.WriteLine($"The Employee name : {birth_date} ");
-
+            this.name = name;
+            this.id = id;
+            dateofbirth = new DateTime(year, month, day);
 
         }
 
-
-
-        // method to print full information 
-        public void print()
+        public void age()
         {
-            Console.WriteLine($"The Employee name : {employee_name} ");
-            Console.WriteLine($"the Employee ID : {employee_id}");
-            //Console.WriteLine($" the birth date  : {birth_date} ");
+            DateTime now = DateTime.Now; TimeSpan value = now.Subtract(dateofbirth);
+
+            Console.WriteLine((int)value.TotalDays / 365);
 
         }
-        //inhertance class
-        class Manager : Employee
+        public virtual void print() { Console.WriteLine(name + " " + id + " " + dateofbirth); }
+
+    }
+    class Manager : Employee
+    {
+        public Manager(string name, int id, int day, int month, int year) : base(name, id, day, month, year)
         {
         }
+        public override void print()
+        {
+            Console.WriteLine(name + " " + id + " ");
+        }
 
-        internal class Test
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
         {
 
-
-            static void Main(string[] args)
-            {
-
-
-                Console.Write("Please Enter the Employee Mame : ");
-                string emp_name = Console.ReadLine();
-
-                Console.Write("Please Enter the Employee ID : ");
-                int emp_id = Convert.ToInt32(Console.ReadLine());
-
-                Console.Write("Please Enter your Birth Year: ");
-                int birth_date = Convert.ToInt32(Console.ReadLine());
-
-                Employee employee = new Employee(emp_name, emp_id, birth_date);
-                employee.print();
-                employee.print(birth_date);
-
-
-            }
+            Manager man = new Manager("Nouran", 1234 ,22, 1, 1998);
+            man.print();
+            man.age();
         }
     }
 }
