@@ -1,55 +1,61 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
-using System.Xml.Linq;
+using static nov_29.Program;
 
-namespace _29_11
+namespace nov_29
 {
-    class Employee
-    {
-        public string name { get; set; }
-        public int id { get; set; }
-        public DateTime dateofbirth { get; set; }
-
-        public Employee(string name, int id, int day, int month, int year)
-        {
-            this.name = name;
-            this.id = id;
-            dateofbirth = new DateTime(year, month, day);
-
-        }
-
-        public void age()
-        {
-            DateTime now = DateTime.Now; TimeSpan value = now.Subtract(dateofbirth);
-
-            Console.WriteLine((int)value.TotalDays / 365);
-
-        }
-        public virtual void print() { Console.WriteLine(name + " " + id + " " + dateofbirth); }
-
-    }
-    class Manager : Employee
-    {
-        public Manager(string name, int id, int day, int month, int year) : base(name, id, day, month, year)
-        {
-        }
-        public override void print()
-        {
-            Console.WriteLine(name + " " + id + " ");
-        }
-
-    }
     internal class Program
     {
+        public class Employee
+        {
+            public string name;
+            public int yearOfBirth;
+            public int id;
+
+            public Employee(string name, int yearOfBirth, int id)
+            {
+                this.name = name;
+                this.yearOfBirth = yearOfBirth;
+                this.id = id;
+            }
+            public int age(int yearOfBirth)
+            {
+                return 2022 - yearOfBirth;
+            }
+            public virtual void greetings(string name)
+            {
+                Console.WriteLine("hello" + " " + name);
+            }
+            public virtual void greet(int id)
+            {
+                Console.WriteLine("Hello emplyee number" + " " + id);
+            }
+        }
+
+        public class Manager : Employee
+        {
+            public override void greetings(string name)
+            {
+                Console.WriteLine("hello" + " " + name);
+            }
+            public Manager(string name, int yearOfBirth, int id) : base(name, yearOfBirth, id)
+            {
+
+            }
+        }
         static void Main(string[] args)
         {
 
-            Manager man = new Manager("Nouran", 1234 ,22, 1, 1998);
-            man.print();
-            man.age();
+            Console.WriteLine();
+            Console.WriteLine("Task 1");
+            Console.WriteLine();
+            Manager manager = new Manager("Nouran", 1998, 99820026);
+            Console.WriteLine("My name is " + manager.name + " " + " I am " + manager.age(manager.yearOfBirth) + " Years Old " + " And My Id Is: " + manager.id);
+            Console.WriteLine();
         }
     }
 }
